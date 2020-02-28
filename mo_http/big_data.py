@@ -469,7 +469,6 @@ def zip2bytes(compressed):
 
     buff = BytesIO(compressed)
     archive = gzip.GzipFile(fileobj=buff, mode='r')
-    from pyLibrary.env.big_data import safe_size
     return safe_size(archive)
 
 
@@ -484,7 +483,6 @@ def bytes2zip(bytes):
             archive.write(b)
         archive.close()
         buff.seek(0)
-        from pyLibrary.env.big_data import FileString, safe_size
         return FileString(buff)
 
     buff = BytesIO()
