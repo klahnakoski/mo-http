@@ -1,5 +1,5 @@
 requests
-mo_dots
+mo-dots
 mo-files
 mo-future
 mo-json
