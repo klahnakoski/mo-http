@@ -1,0 +1,19 @@
+{
+    "author": "Kyle Lahnakoski",
+    "author_email": "kyle@lahnakoski.com",
+    "classifiers": [
+        "Development Status :: 4 - Beta",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+    ],
+    "description": "More HTTP! A few more features atop the Requests library",
+    "include_package_data": true,
+    "install_requires": ["mo-future>=3.47.20042"],
+    "license": "MPL 2.0",
+    "long_description_content_type": "text/markdown",
+    "name": "mo-http",
+    "packages": ["mo_http"],
+    "url": "https://github.com/klahnakoski/mo-http",
+    "version": "3.47.20042"
+}
