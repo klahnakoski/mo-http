@@ -8,12 +8,12 @@ setup(
     classifiers=["Development Status :: 4 - Beta","Topic :: Software Development :: Libraries","Topic :: Software Development :: Libraries :: Python Modules","License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"],
     description='More HTTP! A few more features atop the Requests library',
     include_package_data=True,
-    install_requires=["mo-dots>=3.63.20108","mo-files>=3.60.20091","mo-future>=3.51.20059","mo-json>=3.67.20113","mo-kwargs>=3.54.20059","mo-logs>=3.66.20113","mo-threads>=3.57.20089","mo-times>=3.67.20113","requests"],
+    install_requires=["mo-dots>=3.77.20190","mo-files>=3.77.20190","mo-future>=3.71.20168","mo-json>=3.77.20190","mo-kwargs>=3.77.20190","mo-logs>=3.75.20189","mo-threads>=3.75.20189","mo-times>=3.76.20190","requests"],
     license='MPL 2.0',
     long_description='# mo-http\n\nMore HTTP! A few more features atop the Requests library\n\n## Overview\n\n* handles large data using streams or temporary files\n* compresses/decompresses automatically \n* try multiple urls \n* retry a number of times with sleeps between\n* reminds you to set headers, so you are good citizen \n',
     long_description_content_type='text/markdown',
     name='mo-http',
     packages=["mo_http"],
     url='https://github.com/klahnakoski/mo-http',
-    version='3.67.20113'
+    version='3.77.20190'
 )
