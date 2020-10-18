@@ -25,25 +25,20 @@ from mmap import mmap
 from numbers import Number
 from tempfile import TemporaryFile
 
-from requests import Response, sessions
-from urllib3.util import url
-
 import mo_math
-from mo_dots import Data, Null, coalesce, is_list, set_default, unwrap, to_data, is_sequence
-from mo_files import mimetype
+from mo_dots import Data, Null, coalesce, is_list, set_default, unwrap, wrap, is_sequence
 from mo_files.url import URL
 from mo_future import PY2, is_text, text
 from mo_future import StringIO
-from mo_http.big_data import ibytes2ilines, icompressed2ibytes, safe_size, ibytes2icompressed, bytes2zip, zip2bytes
 from mo_json import json2value, value2json
 from mo_kwargs import override
 from mo_logs import Log
 from mo_logs.exceptions import Except
 from mo_threads import Lock, Till
 from mo_times import Timer, Duration
+from requests import Response, sessions
 
-# WE WANT TO SEND INVALID URL PATHS
-url._remove_path_dot_segments = lambda path: path
+from mo_http.big_data import ibytes2ilines, icompressed2ibytes, safe_size, ibytes2icompressed, bytes2zip, zip2bytes
 
 DEBUG = False
 FILE_SIZE_LIMIT = 100 * 1024 * 1024
@@ -92,7 +87,7 @@ def request(method, url, headers=None, data=None, json=None, zip=None, retry=Non
         Log.warning(text(
             "The mo_http.http module was meant to add extra " +
             "default headers to all requests, specifically the 'Referer' " +
-            "header with a URL to the project. Use the `mo_logs.constants.set()` " +
+            "header with a URL to the project. Use the `pyLibrary.debug.constants.set()` " +
             "function to set `mo_http.http.default_headers`"
         ))
     _warning_sent = True
@@ -130,7 +125,7 @@ def request(method, url, headers=None, data=None, json=None, zip=None, retry=Non
             _to_ascii_dict(headers)
 
             # RETRY
-            retry = to_data(retry)
+            retry = wrap(retry)
             if retry == None:
                 retry = set_default({}, DEFAULTS['retry'])
             elif isinstance(retry, Number):
@@ -318,7 +313,7 @@ class HttpResponse(Response):
 
             if self.headers.get('content-encoding') == 'gzip':
                 return ibytes2ilines(icompressed2ibytes(iterator), encoding=encoding, flexible=flexible)
-            elif self.headers.get('content-type') in [mimetype.ZIP, mimetype.GZIP]:
+            elif self.headers.get('content-type') == 'application/zip':
                 return ibytes2ilines(icompressed2ibytes(iterator), encoding=encoding, flexible=flexible)
             elif self.url.endswith('.gz'):
                 return ibytes2ilines(icompressed2ibytes(iterator), encoding=encoding, flexible=flexible)
