@@ -10,9 +10,9 @@
     "description": "More HTTP! A few more features atop the Requests library",
     "include_package_data": true,
     "install_requires": [
-           "mo-dots>=3.77.20190",   "mo-files>=3.77.20190",  "mo-future>=3.71.20168",
-           "mo-json>=3.77.20190",  "mo-kwargs>=3.77.20190",    "mo-logs>=3.75.20189",
-        "mo-threads>=3.75.20189",   "mo-times>=3.76.20190",               "requests"
+           "mo-dots>=3.93.20259",   "mo-files>=3.92.20258",  "mo-future>=3.89.20246",
+           "mo-json>=3.93.20259",  "mo-kwargs>=3.93.20259",    "mo-logs>=3.99.20292",
+        "mo-threads>=3.99.20292",   "mo-times>=3.76.20190",               "requests"
     ],
     "license": "MPL 2.0",
     "long_description": {
@@ -36,5 +36,5 @@
     "name": "mo-http",
     "packages": ["mo_http"],
     "url": "https://github.com/klahnakoski/mo-http",
-    "version": "3.77.20190"
+    "version": "3.99.20292"
 }
