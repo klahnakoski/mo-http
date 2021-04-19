@@ -8,4 +8,4 @@ More HTTP! A few more features atop the Requests library
 * compresses/decompresses automatically 
 * try multiple urls 
 * retry a number of times with sleeps between
-* reminds you to set headers, so you are good citizen 
+* reminds you to set headers, so you are a good citizen 
