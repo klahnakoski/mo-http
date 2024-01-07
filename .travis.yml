@@ -1,8 +1,6 @@
 language: python
 cache: pip
-python:
-- '3.8'
-- '3.9'
+python: []
 branches:
   only:
   - master

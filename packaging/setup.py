@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     author='Kyle Lahnakoski',
     author_email='kyle@lahnakoski.com',
-    classifiers=["Development Status :: 4 - Beta","Topic :: Software Development :: Libraries","Topic :: Software Development :: Libraries :: Python Modules","License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)","Programming Language :: Python :: 3.8","Programming Language :: Python :: 3.9","Programming Language :: Python :: 3.10","Programming Language :: Python :: 3.11","Programming Language :: Python :: 3.12"],
+    classifiers=["Development Status :: 4 - Beta","Topic :: Software Development :: Libraries","Topic :: Software Development :: Libraries :: Python Modules","License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)","Programming Language :: Python :: 3.10","Programming Language :: Python :: 3.11","Programming Language :: Python :: 3.12"],
     description='More HTTP! A few more features atop the Requests library',
     include_package_data=True,
     install_requires=["mo-dots==9.476.24007","mo-files==6.481.24007","mo-future==7.476.24007","mo-json==6.481.24007","mo-kwargs==7.476.24007","mo-logs==8.477.24007","mo-threads==6.481.24007","mo-times==5.481.24007","requests"],
@@ -14,5 +14,5 @@ setup(
     name='mo-http',
     packages=["mo_http"],
     url='https://github.com/klahnakoski/mo-http',
-    version='4.481.24007'
+    version='4.482.24007'
 )
