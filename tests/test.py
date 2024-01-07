@@ -20,9 +20,15 @@ from __future__ import absolute_import, division
 
 from unittest import TestCase
 
+from mo_threads import stop_main_thread
+
 from mo_http import http
 
 
 class Tests(TestCase):
+    @classmethod
+    def tearDownClass(cls):
+        stop_main_thread()
+
     def test_call_google(self):
         http.get("https://google.com")
